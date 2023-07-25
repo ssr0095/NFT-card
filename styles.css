@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --BG: hsl(217, 54%, 11%);
+    --card: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--BG);
+    font-family: 'Outfit',sans-serif;
+    font-size: 1.12rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 90px 30px; */
+    flex: 1;
+}
+
+.container{
+    background-color: var(--card);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    box-shadow: 2px 19px 15px 20px rgba(0,0,0,0.05);
+    max-width: 350px;
+    max-height: 600px;
+    
+}
+.container .box{
+    display: flex;
+    place-items: center;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.container #image{
+    width: 100%;
+    border-radius: 0.6rem;
+    margin-bottom: 20px;
+}
+.container #eye{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 50px;
+    display: none;
+}
+.container .box:hover #eye{
+    display: block;
+    backdrop-filter: blur(10px);
+}
+
+.container h3{
+    font-size: 1.4rem;
+    color: var(--White);
+    margin: 0 0 20px;
+    font-weight: 600;
+}
+
+.container h3:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.container p{
+    line-height: 25px;
+    font-size: 1.12rem;
+    color: var(--blue);
+    margin: 0 0 20px;
+}
+.info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+}
+.info p{
+    color: var(--Cyan);
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+.info #date{
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+.info p #clk{
+    width: 1rem;
+    margin: 0 7px 0 0;
+    top: 0;left: 0;
+    transform: translate(-50 -50);
+}
+.info p #str{
+    width: 0.7rem;
+    margin: 0 7px 0 0;
+}
+
+.container .line{
+    width: 100%;
+    height: 1.1px;
+    background: var(--line);
+    margin-bottom: 20px;
+
+}
+
+.container footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+
+}
+.container footer img{
+    width: 33px;
+    margin: 0;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.container footer p{
+    font-size: 16px;
+    margin: 0;
+}
+.container footer p span{
+    color: var(--White); 
+}
+.container footer p span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:460px){
+    .container{
+        min-width: 325px;
+    }
+    .container h1{
+        font-size: 1.4rem;
+        font-style: bold;
+    }
+}
